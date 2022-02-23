@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+:root {
+    --main-font: 'Roboto Mono', monospace;
+    --main-color: #DADDE1
+}
+
+body {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: 100;
+}
+
+.container {
+    width: 620px;
+    height: 400px;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 50px;
+    width: 400px;
+    font-size: 2rem;
+    font-family: var(--main-font);
+    font-weight: 200;
+}
