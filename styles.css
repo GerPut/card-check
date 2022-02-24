@@ -24,11 +24,18 @@ h1 {
     font-weight: 100;
 }
 
+p {
+    font-family: var(--main-font);
+    margin-top: 1rem;
+    margin-bottom: 5px;
+}
+
 .container {
     width: 620px;
-    height: 400px;
-    border: 1px solid #000;
+    height: 420px;
+    border: 2px solid #000;
     border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.411);
 }
 
 .card {
@@ -36,6 +43,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 400px;
+
 }
 
 input {
@@ -44,4 +53,50 @@ input {
     font-size: 2rem;
     font-family: var(--main-font);
     font-weight: 200;
+    padding: 2px;
+}
+
+input:invalid {
+    border: 3px solid red;
+}
+
+select {
+    width: 200px;
+    font-size: 1rem;
+    padding: 2px;
+}
+
+.btn, .saveBtn {
+    background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    background-color: #ededed;
+    border-radius: 5px;
+    border: 1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    padding: 7px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #e1e2ed;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
+}
+
+.saveBtn:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.optionBox {
+    display: none;
 }
