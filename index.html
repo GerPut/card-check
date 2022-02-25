@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <h1>Credit Card Validation</h1>
+    <h3>Credit Card Validation</h3>
     <div class="container">
         <div class="card">
             <form action="">
                 <p>Enter Credit Card Number</p>
-                <input type="text" pattern="[0-9]+">
+                <input id="number" type="text" pattern="[0-9]+">
                 <p>Select Your Country</p>
                 <select id="country" name="country" class="form-control">
                     <option value="Afghanistan">Afghanistan</option>
@@ -239,7 +239,7 @@
                     <option value="Syrian Arab Republic">Syrian Arab Republic</option>
                     <option value="Taiwan">Taiwan</option>
                     <option value="Tajikistan">Tajikistan</option>
-                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option value="Tanzania">Tanzania</option>
                     <option value="Thailand">Thailand</option>
                     <option value="Timor-leste">Timor-leste</option>
                     <option value="Togo">Togo</option>
@@ -270,9 +270,9 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select><br>
-                <button class="btn" type="submit">Validate</button>
+                <button id="validateBtn" class="btn" type="submit">Validate</button>
             </form>
-            <p id="error-message"></p>
+            <p class="error-message" id="error-message"></p>
             <div class="optionBox">
                 <p style="color:green" id="pass-message">This a valid card number and legal country</p>
                 <a id="saveCard" href="#" class="saveBtn">Save Card</a>
