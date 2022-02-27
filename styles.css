@@ -14,14 +14,21 @@ body {
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: 100vh;
 }
 
-h3 {
+h2 {
     font-family: var(--main-font);
-    font-weight: 100;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+h4 {
+    font-family: var(--main-font);
+    font-weight: 400;
+    text-align: center;
 }
 
 p {
@@ -33,7 +40,7 @@ p {
 .container {
     width: 620px;
     height: 420px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.411);
 }
@@ -66,7 +73,7 @@ select {
     padding: 2px;
 }
 
-.btn, .saveBtn {
+.btn, .saveBtn, .viewCardsBtn, .returnBtn {
     background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
     background-color: #ededed;
     border-radius: 5px;
@@ -92,7 +99,32 @@ select {
     background-color: #bab1ba;
 }
 
+.viewCardsBtn:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
+}
+
+.returnBtn:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
+}
+
 .btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.saveBtn:active {
+    position: relative;
+    top: 1px;
+}
+
+.viewCardsBtn:active {
+    position: relative;
+    top: 1px;
+}
+
+.returnBtn:active {
     position: relative;
     top: 1px;
 }
@@ -101,6 +133,15 @@ select {
     color: red;
 }
 
-.optionBox {
+.optionBoxNone {
     display: none;
+}
+
+.list-cards {
+    width: 620px;
+    height: 320px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.411);
+    margin-top: 20px;
 }
