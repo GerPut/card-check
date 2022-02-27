@@ -14,11 +14,11 @@ body {
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 100vh;
 }
 
+/* HEADINGS */
 h2 {
     font-family: var(--main-font);
     font-weight: 400;
@@ -31,12 +31,18 @@ h4 {
     text-align: center;
 }
 
+h5 {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 p {
     font-family: var(--main-font);
     margin-top: 1rem;
     margin-bottom: 5px;
 }
 
+/* CONTAINER */
 .container {
     width: 620px;
     height: 420px;
@@ -72,6 +78,8 @@ select {
     font-size: 1rem;
     padding: 2px;
 }
+
+/* BUTTONS */
 
 .btn, .saveBtn, .viewCardsBtn, .returnBtn {
     background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
@@ -129,9 +137,7 @@ select {
     top: 1px;
 }
 
-.error-message {
-    color: red;
-}
+/* MESSAGE AND OPTIONBOX */
 
 .optionBoxNone {
     display: none;
@@ -144,4 +150,13 @@ select {
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.411);
     margin-top: 20px;
+    padding: 0 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.inner-list {
+    display: flex;
 }
