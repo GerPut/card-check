@@ -20,7 +20,7 @@
         <div class="card">
             <form action="">
                 <p>Enter Credit Card Number</p>
-                <input id="number" type="text" pattern="[0-9]+">
+                <input id="number" type="text" pattern="[0-9]+" onclick="resetInput()">
                 <p>Select Your Country</p>
                 <select id="country" name="country" class="form-control">
                     <option value="Afghanistan">Afghanistan</option>
@@ -273,17 +273,20 @@
                 </select><br>
                 <button id="validateBtn" class="btn" type="submit">Validate</button>
             </form>
-            <p class="error-message" id="error-message"></p>
             <div id="optionBox" class="optionBox optionBoxNone">
-                <p style="color:green" id="pass-message">This a valid card number and legal country</p>
+                <p style="color:green" id="pass-message">Success: Valid Card Number and legal country</p>
                 <a id="saveBtn" href="#" class="saveBtn">Save Card</a>
                 <a id="viewCards" href="#" class="viewCardsBtn">View Cards</a>
                 <a id="returnBtn" href="#" class="returnBtn">Return</a>
             </div>
         </div>
     </div>
-    <div id="lsOutput" class="list-cards">
-        <h4>List Valid Credit Cards</h4>
+    <div id="lsOutput" class="list-cards hide">
+        <h4>Valid List</h4>
+        <div class="inner-list">
+            <h5>Valid Card Numbers</h5>
+            <h5>Valid Country</h5>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
