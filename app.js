@@ -2,61 +2,21 @@ const legal = ["Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Camero
 
 // Variables
 const optionBox = document.querySelector('.optionBox')
-const errorMsg = document.querySelector('#error-message')
 const validateBtn = document.getElementById('validateBtn')
 const saveBtn = document.getElementById('saveBtn')
-const viewCardsBtn = document.getElementById('viewCardsBtn')
+const viewCardsBtn = document.getElementById('viewCards')
 const returnBtn = document.getElementById('returnBtn')
-const lsOutput = document.getElementById('lsOutput')
-
-
-//Save Cards
-// saveBtn.addEventListener('click', saveCard)
-// function saveCard() {
-//     const validCard = numberInput.value
-//     const validCountry = countryInput.value
-
-//     if (validCard && validCountry) {
-//         localStorage.setItem(validCard, validCountry)
-//     }
-// };
-
-// for (let i = 0; i < localStorage.length; i++) {
-//     const key = localStorage.key(i)
-//     const value = localStorage.getItem(key)
-//     lsOutput.innerHTML += `${key}: ${value}<br>`
-// }
-
-
-// //View Cards
-// viewCardsBtn.addEventListener('click', viewCardList)
-// function viewCardList() {
-//     lsOutput.classList.toggle("list-cards")
-// }
-
-// // Refresh
-// returnBtn.addEventListener('click', reload)
-// function reload() {
-//     location.reload()
-// }
-
-// //   Show option Box
-// const optionBox = document.getElementById("optionBox")
-// return sum % 10 === 0 ? optionBox.classList.remove("optionBox") : "XXXXXX"
-
-
-// Event Listener Validate Card Action
-validateBtn.addEventListener('click', validate)
-
-//Variables
 var numberInput = document.querySelector('#number')
 var countryInput = document.querySelector('#country')
 
+// Event Listener Validate Card Action
+validateBtn.addEventListener('click', validate)
 function validate(e) {
     e.preventDefault()
 
     if (!legal.includes(countryInput.value) && numberInput.value.length < 13 || numberInput.value.length > 19) {
-        return errorMsg.innerHTML = "This is not a valid Card number or Country"
+        // return errorMsg.innerHTML = "This is not a Valid Card number or Country"
+        return alert("This is not a Valid Card number or Country")
 
     } else if (!legal.includes(countryInput.value)) {
         // Luhn Algo
@@ -71,8 +31,44 @@ function validate(e) {
             const sum = digits.reduce((acc, digit) => acc += digit, 0)
             return sum % 10 === 0
         }
-        return console.log(checkNumber(numberInput.value))
+        if (checkNumber(numberInput.value)) {
+            return optionBox.classList.toggle('optionBoxNone')
+        } else {
+            alert("This is not a Valid Card number or Country")
+        }
     } else {
-        return errorMsg.innerHTML = "This is not a valid Card number or Country"
+        alert("This is not a Valid Card number or Country")
     }
+}
+// Save Cards
+saveBtn.addEventListener('click', saveCard)
+function saveCard() {
+    const validCard = numberInput.value
+    const validCountry = countryInput.value
+
+    if (validCard && validCountry) {
+        localStorage.setItem(validCard, validCountry)
+    }
+};
+
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    const value = localStorage.getItem(key)
+    lsOutput.innerHTML += `${key} : ${value}<br>`
+}
+// View Cards
+viewCardsBtn.addEventListener('click', showCards)
+function showCards() {
+    const lsOutput = document.getElementById('lsOutput')
+    return lsOutput.classList.toggle('hide')
+}
+// Refresh
+returnBtn.addEventListener('click', reload)
+function reload() {
+    lsOutput.classList.remove('hide')
+    location.reload()
+}
+// Reset Input
+function resetInput() {
+    document.querySelector("form").reset();
 }
