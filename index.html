@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <h3>Credit Card Validation</h3>
+    <h2>Credit Card Validation</h2>
     <div class="container">
         <div class="card">
             <form action="">
@@ -273,13 +274,16 @@
                 <button id="validateBtn" class="btn" type="submit">Validate</button>
             </form>
             <p class="error-message" id="error-message"></p>
-            <div class="optionBox">
+            <div id="optionBox" class="optionBox optionBoxNone">
                 <p style="color:green" id="pass-message">This a valid card number and legal country</p>
-                <a id="saveCard" href="#" class="saveBtn">Save Card</a>
-                <a id="viewCards" href="#" class="saveBtn">View Cards</a>
-                <a id="return" href="#" class="saveBtn">Return</a>
+                <a id="saveBtn" href="#" class="saveBtn">Save Card</a>
+                <a id="viewCards" href="#" class="viewCardsBtn">View Cards</a>
+                <a id="returnBtn" href="#" class="returnBtn">Return</a>
             </div>
         </div>
+    </div>
+    <div id="lsOutput" class="list-cards">
+        <h4>List Valid Credit Cards</h4>
     </div>
     <script src="app.js"></script>
 </body>
