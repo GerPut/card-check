@@ -15,8 +15,22 @@ function validate(e) {
     e.preventDefault()
 
     if (!legal.includes(countryInput.value) && numberInput.value.length < 13 || numberInput.value.length > 19) {
-        // return errorMsg.innerHTML = "This is not a Valid Card number or Country"
-        return alert("This is not a Valid Card number or Country")
+        return Toastify({
+
+            text: "This is not a Valid Card Number or Country",
+
+            duration: 1700,
+            position: "center",
+
+            style: {
+                background: "red",
+                color: "#fff",
+                fontSize: "1rem",
+                borderRadius: "10px",
+                fontFamily: "Roboto Mono, monospace"
+            },
+
+        }).showToast();
 
     } else if (!legal.includes(countryInput.value)) {
         // Luhn Algo
@@ -34,10 +48,40 @@ function validate(e) {
         if (checkNumber(numberInput.value)) {
             return optionBox.classList.toggle('optionBoxNone')
         } else {
-            alert("This is not a Valid Card number or Country")
+            Toastify({
+
+                text: "This is not a Valid Card Number or Country",
+
+                duration: 1700,
+                position: "center",
+
+                style: {
+                    background: "red",
+                    color: "#fff",
+                    fontSize: "1rem",
+                    borderRadius: "10px",
+                    fontFamily: "Roboto Mono, monospace"
+                },
+
+            }).showToast();
         }
     } else {
-        alert("This is not a Valid Card number or Country")
+        Toastify({
+
+            text: "This is not a Valid Card Number or Country",
+
+            duration: 1700,
+            position: "center",
+
+            style: {
+                background: "red",
+                color: "#fff",
+                fontSize: "1rem",
+                borderRadius: "10px",
+                fontFamily: "Roboto Mono, monospace"
+            },
+
+        }).showToast();
     }
 }
 // Save Cards
