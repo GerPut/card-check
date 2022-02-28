@@ -17,9 +17,9 @@ function validate(e) {
     if (!legal.includes(countryInput.value) && numberInput.value.length < 13 || numberInput.value.length > 19) {
         return Toastify({
 
-            text: "This is not a Valid Card Number or Country",
+            text: "Invalid card number or country",
 
-            duration: 1700,
+            duration: 1800,
             position: "center",
 
             style: {
@@ -27,7 +27,7 @@ function validate(e) {
                 color: "#fff",
                 fontSize: "1rem",
                 borderRadius: "10px",
-                fontFamily: "Roboto Mono, monospace"
+                fontFamily: "Lato, sans-serif"
             },
 
         }).showToast();
@@ -50,9 +50,9 @@ function validate(e) {
         } else {
             Toastify({
 
-                text: "This is not a Valid Card Number or Country",
+                text: "Invalid card number or country",
 
-                duration: 1700,
+                duration: 1800,
                 position: "center",
 
                 style: {
@@ -60,7 +60,7 @@ function validate(e) {
                     color: "#fff",
                     fontSize: "1rem",
                     borderRadius: "10px",
-                    fontFamily: "Roboto Mono, monospace"
+                    fontFamily: "Lato, sans-serif"
                 },
 
             }).showToast();
@@ -68,9 +68,9 @@ function validate(e) {
     } else {
         Toastify({
 
-            text: "This is not a Valid Card Number or Country",
+            text: "Invalid card number or country",
 
-            duration: 1700,
+            duration: 1800,
             position: "center",
 
             style: {
@@ -78,7 +78,7 @@ function validate(e) {
                 color: "#fff",
                 fontSize: "1rem",
                 borderRadius: "10px",
-                fontFamily: "Roboto Mono, monospace"
+                fontFamily: "Lato, sans-serif"
             },
 
         }).showToast();
