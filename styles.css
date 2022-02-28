@@ -23,6 +23,7 @@ h2 {
     font-family: var(--main-font);
     font-weight: 400;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 h4 {
@@ -47,8 +48,9 @@ p {
     width: 620px;
     height: 420px;
     border: 1px solid #000;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.411);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card {
@@ -147,8 +149,9 @@ select {
     width: 620px;
     height: 320px;
     border: 1px solid #000;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.411);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 20px;
     padding: 0 50px;
 }
