@@ -109,8 +109,7 @@ function showCards() {
 // Refresh
 returnBtn.addEventListener('click', reload)
 function reload() {
-    lsOutput.classList.remove('hide')
-    location.reload()
+    window.location.reload()
 }
 // Reset Input
 function resetInput() {
