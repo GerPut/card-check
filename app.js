@@ -6,8 +6,8 @@ const validateBtn = document.getElementById('validateBtn')
 const saveBtn = document.getElementById('saveBtn')
 const viewCardsBtn = document.getElementById('viewCards')
 const returnBtn = document.getElementById('returnBtn')
-var numberInput = document.querySelector('#number')
-var countryInput = document.querySelector('#country')
+let numberInput = document.querySelector('#number')
+let countryInput = document.querySelector('#country')
 
 // Event Listener Validate Card Action
 validateBtn.addEventListener('click', validate)
