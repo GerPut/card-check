@@ -41,6 +41,7 @@ p {
     font-family: var(--main-font);
     margin-top: 1rem;
     margin-bottom: 5px;
+    color:#ededed;
 }
 
 /* CONTAINER */
@@ -49,30 +50,58 @@ p {
     height: 320px;
     border: 1px solid #000;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.411);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #000000;
+    position: relative;
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chip{
+    padding:10px 0;
+    margin-left: 20px;
+}
+
+.visa{
+    margin-right: 20px;
+}
+
+.map-image{
+    width: 100%;
+    position: absolute;
+    top:10px;
+    left:0;
+    opacity:0.3;
+    z-index: -1;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: 300px;
-
+    margin-top: 0;
 }
 
 input {
-    height: 50px;
+    height: 40px;
     width: 400px;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-family: var(--main-font);
     font-weight: 200;
     padding: 2px;
 }
 
 input:invalid {
-    border: 3px solid red;
+    border: 2px solid red;
 }
 
 select {
@@ -92,8 +121,8 @@ select {
     cursor: pointer;
     color: #000;
     font-family: var(--main-font);
-    font-size: 1rem;
-    padding: 7px 25px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #e1e2ed;
     margin-top: 1rem;
