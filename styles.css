@@ -98,6 +98,7 @@ input {
     font-family: var(--main-font);
     font-weight: 200;
     padding: 2px;
+    text-align: center;
 }
 
 input:invalid {
@@ -183,6 +184,8 @@ select {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 20px;
     padding: 0 50px;
+    position:absolute;
+    top:550px;
 }
 
 .hide {
